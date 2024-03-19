@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="input-section">
+        <label for="inputText">Enter Text to summarize</label>
+        <textarea class="input-text" name="inputText" id="inputText" [(ngModel)]="inputText" rows="10" cols="50"></textarea>
+        <label for="length">Enter Summary Length</label>
+        <input class="summary-length" type="number" [(ngModel)]="summaryLength" placeholder="Enter summary length" min="1" />
+        <button class="summarize-button" (click)="summarize()">Summarize</button>
+    </div>
+    
+    <div class="summarized-text-section" *ngIf="summarizedText">
+        <h3>Summarized Text</h3>
+        <p>{{ summarizedText }}</p>
+    </div>    
+</div>
